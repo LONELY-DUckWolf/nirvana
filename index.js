@@ -1,3 +1,31 @@
+const allChilds = imgList.querySelectorAll('.galerry-item')
+const ff = 0
+const firstEl = allChilds[ff]
+
+firstEl.style.visibility = 'visible'
+
+document.addEventListener("keydown", (event) => {
+    if (event.code === 'ArrowRight') {
+        if (index < allChilds.length - 1) {
+            allChilds[index].style.visibility = 'hidden'; 
+            index++; 
+            allChilds[index].style.visibility = 'visible'; 
+        }
+    }
+
+document.addEventListener("keydown", (event) => {
+    if (event.code === 'Arrowlefy') {
+        if (index < allChilds.length + 1) {
+            allChilds[index].style.visibility = 'hidden'; 
+            index--; 
+            allChilds[index].style.visibility = 'visible'; 
+        }
+    }
+
+
+})
+
+
 const getControls = document.querySelector("#controls");
 const getInp = getControls.querySelector("input");
 const getRender = getControls.querySelector("button[data-action='render']");
