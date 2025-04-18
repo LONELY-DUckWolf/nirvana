@@ -1,0 +1,381 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 30px;
+  border: 1px solid #888;
+  gap: 2px;
+  height: auto;
+  margin-left: 20px;
+}
+
+body {
+  font-family: sans-serif;
+  background: #000;
+  color: white;
+  overflow-x: hidden;
+  font-family: "Montserrat Alternates";
+}
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  background: rgba(10, 20, 10, 0);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 4%;
+  z-index: 9999;
+  border: 2px solid #88888853;
+
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.a:hover {
+  translate: 0 -2px;
+  transition-duration: 500ms;
+}
+
+
+.login-btn {
+  background: #888888a9;
+  color: white;
+  border: 1px solid #888;
+  padding: 6px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+
+
+
+}
+
+.login-btn:hover {
+  translate: 0 -2px;
+  transition-duration: 500ms;
+}
+
+
+.badge-wrapper {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.badge-wrapper:hover {
+  translate: 0 -4px;
+  transition-duration: 500ms;
+}
+
+
+.badge {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 255, 150, 0.05);
+  border: 1px solid #888;
+  border-radius: 999px;
+  padding: 6px 12px;
+  color: #00ffcc;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.badge-version {
+  background-color: #00ffcc;
+  color: #000;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+
+
+
+.title-macros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  margin-top: 20px;
+  font-size: 64px;
+  border: 0px solid #00ffcc;
+  width: 1200px;
+  height: auto;
+  text-align: center;
+
+  padding-left: 350px;
+  padding-top: 20px;
+
+
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  border: 0px solid #ffffff81;
+  width: 1200px;
+  height: auto;
+  text-align: center;
+
+  padding-left: 350px;
+  padding-top: 20px;
+}
+
+.btn-purchase {
+  margin-top: 20px;
+  margin-left: 700px;
+  background: #ffffff;
+  color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.773);
+  padding: 6px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.btn-purchase:hover {
+
+  transition-duration: 500ms;
+  box-shadow: 0px 0px 40px  rgba(255, 255, 255, 0.575);
+}
+
+.recoil-container {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 500px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid #444;
+}
+
+.recoil-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.recoil-section {
+  margin-bottom: 20px;
+}
+
+.recoil-toggle {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.recoil-toggle input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #888;
+  border-radius: 50%;
+  background-color: #222;
+  margin-right: 8px;
+  position: relative;
+  top: 4px;
+}
+
+.recoil-toggle input[type="checkbox"]:checked {
+  background-color: #888;
+}
+
+select {
+  width: 100%;
+  padding: 8px 10px;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+label.disabled,
+.recoil-toggle.disabled {
+  color: #555;
+}
+
+select:disabled {
+  background-color: #111;
+  color: #555;
+  border-color: #333;
+}
+
+
+.resault-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(ellipse at center, #020202 0%, #0d0d0d 100%);
+  border-radius: 16px;
+  padding: 40px;
+  margin: 60px auto;
+  max-width: 1100px;
+  gap: 40px;
+  border: 1px solid #333;
+}
+
+.resault-text {
+  flex: 1;
+  color: #ccc;
+}
+
+.resault-text h3 {
+  font-size: 24px;
+  color: #f2f2f2;
+  margin-bottom: 12px;  
+}
+
+.resault-text p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.resault-icon {
+  width: 28px;
+  margin-bottom: 16px;
+}
+
+.resault-image img {
+  border-radius: 12px;
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #444;
+}
+
+
+.resault-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 40px  rgba(255, 255, 255, 0.575);
+  transition: transform 0.3s ease;
+  transition-duration: 500ms;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap');
+@import url('https://use.fontawesome.com/releases/v6.5.1/css/all.css');
+p {
+  font-size: 9px;
+
+}
+
+h3,
+h4{
+  margin: 0;
+  font-weight: 700;
+  
+}
+
+p {
+  font-weight: 600;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  line-height: 1.5em;
+  color: black;
+}
+
+.item {
+  --color: #888;
+  width: 185px;
+  background-color: var(--color);
+  border-radius: 10px;
+  padding: 10px 5px;
+  box-shadow: #3c40434d 0px 1px 2px 0px,
+              #3c404326 0px 1px 3px 1px;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.item:after {
+  content: '';
+  position: absolute;
+  top: 1em;
+  left: 0;
+  z-index: 2;
+  height: 80%;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--color);
+  border-width: 40px 40px 40px 40px;
+  filter: drop-shadow(5px 0 4px #00000094);
+  transition: filter .5s;
+}
+
+.layer {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: inherit;
+  padding: 20px;
+  box-shadow: #00000012 0px 1px 2px 0px,
+              #00000012 0px 1px 3px 1px;
+  position: relative;
+  left: 10px;
+  transition: left 1s;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+}
+
+.settings-photo {
+  width: 40px;
+  height: 40px;
+}
+
+
+.item:hover .layer {
+  translate: 15px 0;
+  transition: translate 0.5s;
+}
+
+.reviews-title {
+  font-size: 34px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.reviews-subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #aaa;
+}

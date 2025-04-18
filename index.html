@@ -1,51 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vacuum</title>
+  <link rel="stylesheet" href="../style/reset.css" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
 
-<ul class="gallery">  
-        <li class="galerry-item">  
-            <img class="image" src="https://images.pexels.com/photos/4617294/pexels-photo-4617294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1  
-        " alt="зображення">  
-        </li>  
-        <li class="galerry-item">  
-            <img class="image" src="https://images.pexels.com/photos/4617294/pexels-photo-4617294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1  
-        " alt="зображення">  
-        </li>  
-        <li class="galerry-item">  
-            <img class="image" src="https://images.pexels.com/photos/11815778/pexels-photo-11815778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1  
-        " alt="зображення">  
-        </li>  
-        <li class="galerry-item">  
-            <img class="image"  
-                src="https://images.pexels.com/photos/6195166/pexels-photo-6195166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  
-                alt="зображення">  
-        </li>  
-        <li class="galerry-item">  
-            <img class="image"  
-                src="https://images.pexels.com/photos/6957926/pexels-photo-6957926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  
-                alt="зображення">  
-        </li>  
-        <li class="galerry-item">  
-            <img class="image"  
-                src="https://images.pexels.com/photos/15520825/pexels-photo-15520825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  
-                alt="зображення">  
-        </li>  
-    </ul>
+<section id="header" class="header">
+  <div class="navbar">
+    <div class="icon">
+      <img class="logo" src="../boris.jpg" alt="">
+    </div>
+    <div class="nav-links">
+      <a href="#">Pricing</a>
+      <a href="#">Status</a>
+      <a href="#">Reviews</a>
+      <a href="#">Support</a>
+    </div>
+    <button class="login-btn">Login</button>
+  </div>
+</section>
 
-    <div id="controls">
-        <input type="number" min="0" max="100" step="1" />
-        <button type="button" data-action="render">Створити</button>
-        <button type="button" data-action="destroy">Очистити</button>
-        </div>
-        
-        <div id="boxes"></div>
-        <script src="./index.js"></script>
+<section id="hero" class="hero">
+  <div class="badge-wrapper">
+    <div class="badge">
+      <div class="badge-version">2.0</div>
+      Has been released
+    </div>
+  </div>
+
+  <h1 class="title-macros">Boost your Recoil Control with Rust Scripts.</h1>
+  <p class="about">Elevate your Rust Gameplay with the Best Rust Recoil Scripts. Even if you're already using a Rust Script in 2025 we’ve got you covered with something far better!</p>
+  
+  <button class="btn-purchase">Purchese Now</button>
+
+  <div class="recoil-container">
+    <h2>Recoil</h2>
+
+    <div class="recoil-section">
+      <label class="recoil-toggle">
+        <input type="checkbox" checked />
+        Recoil
+      </label>
+      <label class="recoil-toggle disabled">
+        <input type="checkbox" disabled />
+        Blatant Mode
+      </label>
+    </div>
+
+    <div class="recoil-section">
+      <label for="weapon">Selected Weapon - Custom</label>
+      <select id="weapon">
+        <option>Custom</option>
+        <option>AK-47</option>
+        <option>M4A4</option>
+      </select>
+    </div>
+
+    <div class="recoil-section">
+      <label for="scope">Selected Scope - Holosight</label>
+      <select id="scope">
+        <option>Holosight</option>
+        <option>ACOG</option>
+        <option>Red Dot</option>
+      </select>
+    </div>
+
+    <div class="recoil-section">
+      <label for="barrel" class="disabled">Selected Barrel - No Barrel</label>
+      <select id="barrel" disabled>
+        <option>No Barrel</option>
+      </select>
+    </div>
+  </div>
+
+
+</section>
+
+<section class="resault-section">
+  <div class="resault-text">
+    <img src="https://iconicink.store/wp-content/uploads/2024/12/image-65.png" alt="icon" class="resault-icon" />
+    <h3>Auto-Detect Weapon</h3>
+    <p>
+      Our Rust Scripts are engineered with precision and constantly updated to stay ahead of the meta, 
+      this resault stabilizes your aim and neutralizes weapon kickback to deliver pinpoint accuracy.
+    </p>
+  </div>
+  <div class="resault-image">
+    <img src="https://cdn.akamai.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg" alt="Auto Detect Preview" />
+  </div>
+</section>
+
+<section id="reviews">
+  <h2 class="reviews-title">Reviews</h2>
+  <p class="reviews-subtitle">What our users say</p>
+  <div class="cont">
+    <div class="item">
+      <div class="layer">
+        <h3>
+          User
+        </h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur reiciendis tenetur.</p>
+      <span><img class="settings-photo" src="https://media.istockphoto.com/id/1416937202/vector/settings-or-gear-icon-cog-setting-vector-illustration.jpg?s=612x612&w=0&k=20&c=3vVNW4ssuNPwKUMT5HSMEbUlknZmp5FeEBF1eZTzJYA=" alt=""></span>
+      </div>
+      <h4>Rate: 5</h4>
+    </div>
+
+    <div class="item">
+      <div class="layer">
+        <h3>
+          User
+        </h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur reiciendis tenetur.</p>
+      <span><img class="settings-photo" src="https://media.istockphoto.com/id/1416937202/vector/settings-or-gear-icon-cog-setting-vector-illustration.jpg?s=612x612&w=0&k=20&c=3vVNW4ssuNPwKUMT5HSMEbUlknZmp5FeEBF1eZTzJYA=" alt=""></span>
+      </div>
+      <h4>Rate: 4</h4>
+    </div>
+    <div class="item">
+      <div class="layer">
+        <h3>
+          User
+        </h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur reiciendis tenetur.</p>
+      <span><img class="settings-photo" src="https://media.istockphoto.com/id/1416937202/vector/settings-or-gear-icon-cog-setting-vector-illustration.jpg?s=612x612&w=0&k=20&c=3vVNW4ssuNPwKUMT5HSMEbUlknZmp5FeEBF1eZTzJYA=" alt=""></span>
+      </div>
+      <h4>Rate: 4.5</h4>
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
