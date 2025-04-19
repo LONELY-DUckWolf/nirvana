@@ -1,28 +1,9 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-button {
-  cursor: pointer;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background: none;
-  border: none;
-  
-}
-
-button:hover {
-  cursor: pointer;
-  background: none;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  color: #fff;
-  transition: all 0.3s ease-in-out;
-}
 
 .logo {
   width: 30px;
@@ -40,6 +21,8 @@ body {
   font-family: "Montserrat Alternates";
 }
 
+
+
 .navbar {
   position: fixed;
   top: 20px;
@@ -52,10 +35,28 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
-  border-radius: 4%;
+  border-radius: 20px;
   z-index: 9999;
   border: 2px solid #88888853;
 
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  border: 0px solid #888;
+  translate: 0 2px;
+
+}
+
+.nav-link:hover {
+  color: #00ffcc;
+
+  border-radius: 20px;
+  border: 2px solid #888;
+  translate: 0 2px;
+
+  padding: 5px 5px;
 }
 
 .nav-links a {
@@ -78,7 +79,7 @@ body {
   padding: 6px 12px;
   border-radius: 12px;
   cursor: pointer;
-
+  transition: all 0.3s ease;
 
 
 }
@@ -257,6 +258,13 @@ body {
   border: none;
   box-shadow: 0 0 10px #889999;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.purchase-btn:hover {
+  background: #afafaf;
+  color: black;
+  box-shadow: 0 0 20px #b3b2b2;
 }
 
 
@@ -319,5 +327,5 @@ body {
 }
 
 .column a:hover {
-  color: #00ffae;
+  color: #888;
 }
