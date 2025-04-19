@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./cart.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  
+</head>
+<section id="header" class="header">
+    <div class="navbar">
+      <div class="icon">
+       
+        <a href="./second7.html"><img class="logo" src="./boris.jpg" alt=""></a>
+      </div>
+      <div class="nav-links">
+        <a class="nav-link" href="./second7.html" >Pricing</a>
+        <a class="nav-link" href="./second7.html">Status</a>
+        <a class="nav-link" href="./second7.html">Reviews</a>
+        <a class="nav-link" href="./second7.html">Support</a>
+      </div>
+      <button class="login-btn">Login</button>
+    </div>
+  </section> 
+<body class="checkout-body">
+  <div class="checkout-container">
+    <h2 class="checkout-title">Billing Details</h2>
+    <div class="form-group">
+      <label for="email" class="form-label">Email Address<span class="required">*</span></label>
+      <input type="email" id="email" class="form-input" placeholder="Email Address" required />
+    </div>
+
+    <div class="order-summary">
+      <h3 class="section-title">Your Order</h3>
+      <div class="order-item">
+        <span class="item-name"></span>
+        <span class="item-price"></span>
+      </div>
+      <div class="order-total">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="payment-methods">
+      <div class="payment-option selected">
+        <input type="radio" name="payment" id="card" checked />
+        <label for="card">
+          <span class="method-title">Card Payment - Option 1</span>
+          <span class="method-desc">You can pay using your credit/debit card.</span>
+        </label>
+      </div>
+
+      <div class="payment-option">
+        <input type="radio" name="payment" id="crypto" />
+        <label for="crypto">
+          <span class="method-title">Cryptocurrency</span>
+          <span class="method-desc">via CryptAPI</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="terms">
+      <input type="checkbox" id="agree" required />
+      <label for="agree">I have read and agree to the website terms and conditions<span class="required">*</span></label>
+    </div>
+
+    <button class="place-order-btn">Place Order</button>
+
+    <footer class="checkout-footer">Need help? Contact us.</footer>
+  </div>
+</body>
+</html>

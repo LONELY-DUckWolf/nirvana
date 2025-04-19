@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    
+
+  }
+
+  
+  
+  .logo {
+    width: 30px;
+    border: 1px solid #888;
+    gap: 2px;
+    height: auto;
+    margin-left: 20px;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+    font-family: "Montserrat Alternates";
+  }
+  
+  
+  
+  .navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    background: rgba(10, 20, 10, 0);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 20px;
+    z-index: 9999;
+    border: 2px solid #88888853;
+  
+  }
+  
+  .nav-link {
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    border: 0px solid #888;
+    translate: 0 2px;
+  
+  }
+  
+  .nav-link:hover {
+    color: #00ffcc;
+  
+    border-radius: 20px;
+    border: 2px solid #888;
+    translate: 0 2px;
+  
+    padding: 5px 5px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+  }
+  
+  .a:hover {
+    translate: 0 -2px;
+    transition-duration: 500ms;
+  }
+  
+  
+  .login-btn {
+    background: #888888a9;
+    color: white;
+    border: 1px solid #888;
+    padding: 6px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  
+  
+  }
+  
+  .login-btn:hover {
+    translate: 0 -2px;
+    transition-duration: 500ms;
+  }
+
+body.checkout-body {
+    background-color: #0f111a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .checkout-container {
+    background-color: #151824;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .checkout-title,
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #e0e0e0;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #2e3440;
+    background-color: #1e2233;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+  
+  .required {
+    color: #00d084;
+    margin-left: 0.25rem;
+  }
+  
+  .order-summary {
+    background-color: #1a1f2e;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .order-item,
+  .order-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .order-total {
+    font-weight: bold;
+    border-top: 1px solid #333;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .payment-methods {
+    margin-bottom: 1.5rem;
+  }
+  
+  .payment-option {
+    background-color: #1e2233;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  
+
+  
+  .payment-option label {
+    cursor: pointer;
+    display: block;
+    color: #ffffff;
+  }
+  
+  .method-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+  
+  .method-desc {
+    font-size: 0.9rem;
+    color: #bbbbbb;
+  }
+  
+  .terms {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #bbbbbb;
+  }
+  
+  .terms input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
+  .place-order-btn {
+    background-color: #00d084;
+    color: #0f111a;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .place-order-btn:hover {
+    background-color: #00b672;
+  }
+  
+  .checkout-footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #777;
+  }
+  
+
+
+
+  .footer {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 80px;
+    flex-wrap: wrap;
+  
+  }
+  
+  .footer-left {
+    max-width: 400px;
+  }
+  
+  .footer-left .logo {
+    width: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .footer-left .green {
+    color: #888;
+  }
+  
+  .footer-left p {
+    margin: 10px 0;
+    color: #777;
+    font-size: 14px;
+  }
+  
+  .footer-left .featured {
+    margin-top: 20px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+
+
+  .brend {
+    animation: brend 2.5s infinite ease-in-out;
+    animation-delay: 0.3s;
+    transition: all 0.3s ease;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  
+  .brend:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .brend:nth-child(3) {
+    animation-delay: 0.7s;
+  }
+  
+  .brend:nth-child(4) {
+    animation-delay: 0.9s;
+  }
+  
+  .brend:nth-child(5) {
+    animation-delay: 1.1s;
+  }
+  
+  .brend:nth-child(6) {
+    animation-delay: 1.3s;
+  }
+  
+  
+  
+  @keyframes brend {
+    0%, 100% {
+      color: #fff;
+    }
+    50% {
+      color: #888;
+    }
+  }
+  

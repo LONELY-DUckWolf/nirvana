@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 .logo {
   width: 30px;
@@ -589,6 +592,29 @@ h3 {
   color: #888;
 }
 
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 14px;
+  font-size: 20px;
+  background: #88888800;
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 2px solid #888;
+  border-radius: 50px;
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 0 10px #888;
+  transition: transform 0.3s;
+}
+
+.scroll-top:hover {
+  transform: translateY(-3px);
+}
+
+
 
 .status-section {
   text-align: center;
@@ -692,6 +718,11 @@ h3 {
   margin-bottom: 10px;
 }
 
+.link-about {
+  color: #fff;
+
+}
+
 .feature-text h2 {
   font-size: 24px;
   margin-bottom: 12px;
@@ -758,3 +789,5 @@ h3 {
     color: #888;
   }
 }
+
+

@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 .logo {
   width: 30px;
@@ -575,6 +578,31 @@ h3 {
   margin-bottom: 15px;
 }
 
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 14px;
+  font-size: 20px;
+  background: #88888800;
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 2px solid #888;
+  border-radius: 50px;
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 0 10px #888;
+  transition: transform 0.3s;
+}
+
+.scroll-top:hover {
+  transform: translateY(-3px);
+}
+
+
+
+
 .column a {
   display: block;
   color: #fff;
@@ -716,4 +744,44 @@ h3 {
 
 .button-link {
   transition: all 0.3s ease;
+}
+
+.brend {
+  animation: brend 2.5s infinite ease-in-out;
+  animation-delay: 0.3s;
+  transition: all 0.3s ease;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+
+.brend:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.brend:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.brend:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.brend:nth-child(5) {
+  animation-delay: 1.1s;
+}
+
+.brend:nth-child(6) {
+  animation-delay: 1.3s;
+}
+
+
+
+@keyframes brend {
+  0%, 100% {
+    color: #fff;
+  }
+  50% {
+    color: #888;
+  }
 }
