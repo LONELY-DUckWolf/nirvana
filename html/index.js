@@ -1,54 +1,18 @@
-
-const introText = document.getElementById("introText");
-const introScreen = document.getElementById("introScreen");
-const mainContent = document.getElementById("mainContent");
-
-const message = "Hello, that’s Vacuum!";
-let index = 0;
-
-function typeEffect() {
-  if (index < message.length) {
-    introText.textContent += message[index];
-    index++;
-    const glitchDelay = Math.random() * (100 - 30) + 30;
-    setTimeout(typeEffect, glitchDelay);
-  } else {
-    setTimeout(() => {
-      introScreen.style.opacity = 0;
-      setTimeout(() => {
-        introScreen.style.display = "none";
-        mainContent.classList.remove("hidden");
-        mainContent.classList.add("visible");
-      }, 1000);
-    }, 800);
-  }
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-  typeEffect();
-});
-
-
-
-
-
 const mainImg = document.querySelector(".main-img");
 const thumbs = document.querySelectorAll(".thumbs img");
 
 thumbs.forEach(thumb => {
-thumb.addEventListener("click", () => {
-  mainImg.style.opacity = 0;
-  setTimeout(() => {
-    mainImg.src = thumb.src;
-    mainImg.style.opacity = 1;
-  }, 200);
+  thumb.addEventListener("click", () => {
+    mainImg.style.opacity = 0;
+    setTimeout(() => {
+      mainImg.src = thumb.src;
+      mainImg.style.opacity = 1;
+    }, 200);
 
-  thumbs.forEach(t => t.classList.remove("active"));
-  thumb.classList.add("active");
+    thumbs.forEach(t => t.classList.remove("active"));
+    thumb.classList.add("active");
+  });
 });
-});
-
-
 
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
@@ -60,7 +24,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
@@ -68,33 +31,49 @@ scrollTopBtn.addEventListener("click", () => {
   });
 });
 
+const purchaseBtn = document.getElementById("purchaseBtn");
+const cartModal = document.getElementById("cartModal");
+const closeCartBtn = document.getElementById("closeCartBtn");
 
-
-setTimeout(() => {
-  document.getElementById('ratingModal').classList.add('open');
-  document.body.classList.add('modal-open');
-}, 1800000);
-
-const stars = document.querySelectorAll('.rating-stars span');
-let selectedRating = 0;
-
-stars.forEach(star => {
-  star.addEventListener('click', () => {
-    selectedRating = star.getAttribute('data-rate');
-    stars.forEach(s => s.classList.remove('selected'));
-    for (let i = 0; i < selectedRating; i++) {
-      stars[i].classList.add('selected');
-    }
-  });
+purchaseBtn.addEventListener("click", () => {
+  cartModal.classList.add("open");
+  document.body.classList.add("modal-open");
 });
 
-document.querySelector('.rating-submit').addEventListener('click', () => {
-  if (selectedRating > 0) {
-    alert(`Thanks for rating us ${selectedRating} stars!`);
-    document.getElementById('ratingModal').classList.remove('open');
-    document.body.classList.remove('modal-open');
-  } else {
-    alert('Please select a rating before submitting.');
+closeCartBtn.addEventListener("click", () => {
+  cartModal.classList.remove("open");
+  document.body.classList.remove("modal-open");
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === cartModal) {
+    cartModal.classList.remove("open");
+    document.body.classList.remove("modal-open");
   }
 });
 
+const toggleDiscount = document.getElementById("toggleDiscount");
+const discountBody = document.getElementById("discountBody");
+const arrow = document.getElementById("arrow");
+
+toggleDiscount.addEventListener("click", () => {
+  discountBody.classList.toggle("open");
+  arrow.classList.toggle("rotate");
+});
+
+
+const cartBtn = document.getElementById("cartBtn");
+
+
+let cartItemCount = 2; 
+
+if (cartItemCount > 0) {
+  cartBtn.style.display = "block";
+} else {
+  cartBtn.style.display = "none";
+}
+
+cartBtn.addEventListener("click", () => {
+  cartModal.classList.add("open");
+  document.body.classList.add("modal-open");
+});
