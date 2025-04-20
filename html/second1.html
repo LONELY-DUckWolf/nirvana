@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../second/index.css" />
-    <link rel="stylesheet" href="../second/reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./reset.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   
@@ -15,17 +15,17 @@
         <div class="navbar">
           <div class="icon">
            
-            <a href="./second7.html"><img class="logo" src="./boris.jpg" alt=""></a>
+            <a href="../index.html"><img class="logo" src="./boris.jpg" alt=""></a>
           </div>
           <div class="nav-links">
-            <a class="nav-link" href="#price" >Pricing</a>
-            <a class="nav-link" href="#status">Status</a>
-            <a class="nav-link" href="#reviews">Reviews</a>
-            <a class="nav-link" href="#footer">Support</a>
+            <a class="nav-link" href="../index.html" >Pricing</a>
+            <a class="nav-link" href="../index.html">Status</a>
+            <a class="nav-link" href="../index.html">Reviews</a>
+            <a class="nav-link" href="../index.html">Support</a>
           </div>
           <button class="login-btn">Login</button>
         </div>
-      </section>
+      </section>    
 
       <section class="product-card">
         <div class="product-content">
@@ -65,11 +65,10 @@
           <p class="old-price">$45.00 <span class="new-price">$29.99</span></p>
           <p class="stock">Availability: <span class="in-stock">13 in stock</span></p>
       
-          <button class="purchase-btn">PURCHASE</button>
+          <button id="purchaseBtn" class="purchase-btn">PURCHASE</button>
         </div>
       </section>
       
-
 
       <footer id="footer" class="footer">
         <div class="footer-left">
@@ -106,7 +105,31 @@
       </footer>
       <button id="scrollTopBtn" class="scroll-top">↑</button>
 
-      <script type="module" src="./index.js"></script>
+
+      <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+          <span class="close-btn" id="closeCartBtn">&times;</span>
+          <h2>View Your Cart</h2>
+          <div class="line"></div>
+          <p class="buy-item">Iconic Public Rust Script добавлен в корзину!</p>
+        </div>
+        <div class="cart-modal-footer">
+          <button class="checkout-btn"><a href="./buy.html" class="cart-buy">Checkout</a></button>    
+        </div>
+        <div class="discount-container">
+            <div class="discount-header" id="toggleDiscount">
+              <span>Got a discount code?</span>
+              <span class="arrow" id="arrow">&#9660;</span>
+            </div>
+          
+            <div class="discount-body" id="discountBody">
+              <input type="text" placeholder="Coupon Code" class="discount-input" />
+              <button class="apply-btn">Apply</button>
+            </div>
+          </div>
+          
+      </div>
+<script type="module" src="./index.js"></script>
   
 </body>
 </html>

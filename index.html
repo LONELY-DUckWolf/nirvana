@@ -28,7 +28,7 @@
       <a class="nav-link" href="#reviews">Reviews</a>
       <a class="nav-link" href="#footer">Support</a>
     </div>
-    <button class="login-btn">Login</button>
+    <button type="button" class="login-btn">User</button>
   </div>
 </section>
 
@@ -149,7 +149,7 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur reiciendis tenetur.</p>
       <span><img class="settings-photo" src="https://media.istockphoto.com/id/1416937202/vector/settings-or-gear-icon-cog-setting-vector-illustration.jpg?s=612x612&w=0&k=20&c=3vVNW4ssuNPwKUMT5HSMEbUlknZmp5FeEBF1eZTzJYA=" alt=""></span>
       </div>
-      <h4>Rate: 4.5</h4>
+      <h4>Rate: 4</h4>
     </div>
   </div>
 </section>
@@ -162,37 +162,37 @@
     <div class="card">
       <h2>Public Rust Script</h2>
       <ul>
-        <li>All Automatic Weapons</li>
-        <li>Increased Safety & Security</li>
-        <li>Perfect Recoil Control</li>
-        <li>Customizable keybinds</li>
-        <li>Hidden from Task-Manager</li>
+        <li class="card-item">All Automatic Weapons</li>
+        <li class="card-item">Increased Safety & Security</li>
+        <li class="card-item">Perfect Recoil Control</li>
+        <li class="card-item">Customizable keybinds</li>
+        <li class="card-item">Hidden from Task-Manager</li>
       </ul>
-      <button class="button-link" type="button"><a href="./html/second/second1.html" class="buy-link">View product</a></button>
+      <button class="button-link" type="button"><a href="./html/second1.html" class="buy-link">View product</a></button>
     </div>
 
     <div class="card">
       <h2>Ai Aimbot</h2>
       <ul>
-        <li>AI Aimbot</li>
-        <li>Visual enemy ESP</li>
-        <li>Rust Script included</li>
-        <li>FOV circle</li>
-        <li>Customizable keybinds</li>
+        <li class="card-item">AI Aimbot</li>
+        <li class="card-item">Visual enemy ESP</li>
+        <li class="card-item">Rust Script included</li>
+        <li class="card-item">FOV circle</li>
+        <li class="card-item">Customizable keybinds</li>
       </ul>
-      <button class="button-link" type="button"><a href="./html/second/second2.html" class="buy-link">View product</a></button>
+      <button class="button-link" type="button"><a href="./html/second2.html" class="buy-link">View product</a></button>
     </div>
 
     <div class="card">
       <h2>Private Rust Script</h2>
       <ul>
-        <li>All features from our public</li>
-        <li>Limited Slots</li>
-        <li>Undetected 3+ Years</li>
-        <li>Increased Safety & Security</li>
-        <li>Auto-Detect Weapon</li>
+        <li class="card-item">All features from our public</li>
+        <li class="card-item">Limited Slots</li>
+        <li class="card-item">Undetected 3+ Years</li>
+        <li class="card-item">Increased Safety & Security</li>
+        <li class="card-item">Auto-Detect Weapon</li>
       </ul>
-      <button class="button-link" type="button"><a href="./html/second/second3.html" class="buy-link">View product</a></button>
+      <button class="button-link" type="button"><a href="./html/second3.html" class="buy-link">View product</a></button>
     </div>
   </div>
 </section>
@@ -202,17 +202,17 @@
   
   <div class="status-box">
     <span>Public Rust Script</span>
-    <div class="status-label"><a href="./html/second/second1.html" class="link-about">About</a></div>
+    <div class="status-label"><a href="./html/second1.html" class="link-about">About</a></div>
   </div>
 
   <div class="status-box">
     <span>Ai Aimbot</span>
-    <div class="status-label"><a href="./html/second/second2.html" class="link-about">About</a></div>
+    <div class="status-label"><a href="./html/second2.html" class="link-about">About</a></div>
   </div>
 
   <div class="status-box">
     <span>Private Rust Script</span>
-    <div class="status-label"><a href="./html/second/second3.html" class="link-about">About</a></div>
+    <div class="status-label"><a href="./html/second3.html" class="link-about">About</a></div>
   </div>
 </section>
 
@@ -246,7 +246,7 @@
     </div>
     <div class="column">
       <h4>Customer</h4>
-      <a href="#">Shevchenko Vagus </a>
+      <a href="#"></a>
       <a href="#">380970430423</a>
     </div>
   </div>
@@ -256,7 +256,51 @@
 
 <button id="scrollTopBtn" class="scroll-top">↑</button>
 
+<div id="ratingModal" class="rating-modal">
+  <div class="rating-box">
+    <h2 class="rate-title">Enjoying the site?</h2>
+    <p class="mclover">We'd love your feedback!</p>
+    <div class="rating-stars">
+      <span class="star" data-rate="1">★</span>
+      <span class="star" data-rate="2">★</span>
+      <span class="star" data-rate="3">★</span>
+      <span class="star" data-rate="4">★</span>
+      <span class="star" data-rate="5">★</span>
+    </div>
+    <button class="rating-submit">Submit Rating</button>
   </div>
+
+</div>
+
+
+<section class="register">
+    
+  <div class="register-container">
+      
+
+      <p class="register-text">
+          Hello!<br>
+          Thats Vacuum and we made a macros!<br>
+
+      </p>
+  <div class="register-box">
+  
+      <label for="username" class="register-label">Pls write your name or login:</label>
+      <input type="text" id="username" class="register-input" placeholder="Name or login" required/>
+      
+      <button class="register-button">Save</button>
+  </div>
+  </div>
+  
+
+  <img src="./free-icon-weapon-crosshair-63552.png" class="register-icon register-icon--left-top" alt="sword">
+  <img src="./30349.png" class="register-icon register-icon--left-bottom" alt="puzzle">
+  <img src="./3159633.png" class="register-icon register-icon--right-top" alt="code">
+  <img src="./free-icon-hands-and-scope-103666.png" class="register-icon register-icon--right-bottom" alt="game">
+  <div class="register-backdrop"></div>
+  <button class="register-close">&times;</button>
+</div>
+</section>
 
 <script type="module" src="./js/index.js"></script>
 

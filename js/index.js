@@ -3,7 +3,7 @@
   const introScreen = document.getElementById("introScreen");
   const mainContent = document.getElementById("mainContent");
 
-  const message = "Hello that’s Vacuum!";
+  const message = "Hello, that’s Vacuum!";
   let index = 0;
 
   function typeEffect() {
@@ -68,3 +68,60 @@ thumbs.forEach(thumb => {
     });
   });
 
+
+
+  setTimeout(() => {
+    document.getElementById('ratingModal').classList.add('open');
+    document.body.classList.add('modal-open');
+  }, 1800000);
+
+  const stars = document.querySelectorAll('.rating-stars span');
+  let selectedRating = 0;
+
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      selectedRating = star.getAttribute('data-rate');
+      stars.forEach(s => s.classList.remove('selected'));
+      for (let i = 0; i < selectedRating; i++) {
+        stars[i].classList.add('selected');
+      }
+    });
+  });
+
+  document.querySelector('.rating-submit').addEventListener('click', () => {
+    if (selectedRating > 0) {
+      alert(`Thanks for rating us ${selectedRating} stars!`);
+      document.getElementById('ratingModal').classList.remove('open');
+      document.body.classList.remove('modal-open');
+    } else {
+      alert('Please select a rating before submitting.');
+    }
+  });
+
+
+
+  const register = document.querySelector(".register"),
+      closeBtn = document.querySelector(".register-close"),
+      saveBtn = document.querySelector(".register-button"),
+      input = document.querySelector(".register-input"),
+      greeting = document.querySelector(".login-btn");
+
+document.body.classList.add("no-scroll"); 
+closeBtn.addEventListener("click", closeModal);
+saveBtn.addEventListener("click", saveName);
+
+function closeModal() {
+    register.classList.add("backdrop-hidden");
+    document.body.classList.remove("no-scroll");
+}
+
+function saveName() {
+    if (input.value.trim()) {
+        
+        greeting.textContent = `${input.value.trim()}`
+        closeModal();
+    } else {
+        input.placeholder = "Please enter your name";
+        input.classList.add("error");
+    }
+}

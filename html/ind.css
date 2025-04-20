@@ -25,6 +25,44 @@ body {
   font-family: "Montserrat Alternates";
 }
 
+.intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0d0d0d;
+  color: #ffffff; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: monospace;
+  overflow: hidden;
+  transition: opacity 1s ease;
+  font-family: "Montserrat Alternates";
+}
+
+.intro-text {
+  font-size: 46px; 
+  white-space: nowrap;
+  border-right: 2px solid #ffffff;
+  animation: blink 0.7s steps(1) infinite;
+  font-family: "Montserrat Alternates";
+}
+
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
 
 
 .navbar {
@@ -554,7 +592,7 @@ h3 {
 }
 
 .footer-left .green {
-  color: #00ffae;
+  color: #888;
 }
 
 .footer-left p {
@@ -576,6 +614,20 @@ h3 {
 .column h4 {
   font-weight: bold;
   margin-bottom: 15px;
+}
+
+.column a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 6px 0;
+  font-size: 14px;
+  transition: 0.2s;
+  transition: all 0.3s ease;
+}
+
+.column a:hover {
+  color: #888;
 }
 
 .scroll-top {
@@ -600,22 +652,6 @@ h3 {
   transform: translateY(-3px);
 }
 
-
-
-
-.column a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  margin: 6px 0;
-  font-size: 14px;
-  transition: 0.2s;
-  transition: all 0.3s ease;
-}
-
-.column a:hover {
-  color: #888;
-}
 
 
 .status-section {
@@ -720,6 +756,11 @@ h3 {
   margin-bottom: 10px;
 }
 
+.link-about {
+  color: #fff;
+
+}
+
 .feature-text h2 {
   font-size: 24px;
   margin-bottom: 12px;
@@ -745,6 +786,7 @@ h3 {
 .button-link {
   transition: all 0.3s ease;
 }
+
 
 .brend {
   animation: brend 2.5s infinite ease-in-out;
@@ -783,5 +825,112 @@ h3 {
   }
   50% {
     color: #888;
+  }
+}
+
+
+.rating-modal, .login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  display: none;
+}
+
+.rating-modal.open, .login-modal.open {
+  display: flex;
+}
+
+.rating-box, .login-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.rating-stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.rating-stars span {
+  font-size: 28px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.rating-stars span.selected {
+  color: gold;
+}
+
+.rating-submit, .login-submit {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+
+
+.card-item {
+  animation: card 2.5s infinite ease-in-out;
+  animation-delay: 0.3s;
+  transition: all 0.3s ease;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+
+
+.card-item:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.card-item:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.card-item:nth-child(4) {
+  animation-delay: 1.3s;
+}
+
+.card-item:nth-child(5) {
+  animation-delay: 1.7s;
+}
+
+
+
+@keyframes card {
+  0%, 100% {
+    color: #fff;
+  }
+  50% {
+    color: #01a301;
   }
 }
