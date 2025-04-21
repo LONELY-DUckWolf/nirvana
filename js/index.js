@@ -70,6 +70,99 @@ thumbs.forEach(thumb => {
 
 
 
+  const openRegisterBtn = document.querySelector(".login-btn");
+  const registerModal = document.querySelector(".register");
+  const saveBtn = document.querySelector(".register-button");
+  const closeBtn = document.querySelector(".register-close");
+  const userNameBtn = document.querySelector(".login-btn");
+
+
+  const emailTooltip = document.createElement("span");
+  emailTooltip.classList.add("email-tooltip");
+  emailTooltip.style.cssText = `
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    border-radius: 6px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10000;
+  `;
+  userNameBtn.style.position = 'relative';
+  userNameBtn.appendChild(emailTooltip);
+
+
+  openRegisterBtn.addEventListener("click", () => {
+    registerModal.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    registerModal.style.display = "none";
+  });
+
+  saveBtn.addEventListener("click", () => {
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("emailInput").value.trim();
+  
+    const allowedDomains = ["gmail.com", "hotmail.com", "ukr.net"];
+    const emailParts = email.split("@");
+  
+    if (
+      username &&
+      emailParts.length === 2 &&
+      allowedDomains.includes(emailParts[1].toLowerCase())
+    ) {
+      localStorage.setItem("vacuum_username", username);
+      localStorage.setItem("vacuum_email", email);
+  
+      userNameBtn.textContent = username;
+      emailTooltip.textContent = email;
+  
+      console.log("Email:", email);
+  
+      registerModal.style.display = "none";
+    } else {
+      alert("Please enter a valid email (e.g. @gmail.com, @hotmail.com, @ukr.net)");
+    }
+  });
+  
+
+
+  userNameBtn.addEventListener("mouseenter", () => {
+    if (emailTooltip.textContent.trim() !== "") {
+      emailTooltip.style.display = "block";
+      setTimeout(() => emailTooltip.style.opacity = "1", 10);
+    }
+  });
+
+  userNameBtn.addEventListener("mouseleave", () => {
+    emailTooltip.style.opacity = "0";
+    setTimeout(() => emailTooltip.style.display = "none", 300);
+  });
+
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedName = localStorage.getItem("vacuum_username");
+    const savedEmail = localStorage.getItem("vacuum_email");
+
+    if (savedName && savedEmail) {
+      userNameBtn.textContent = savedName;
+      emailTooltip.textContent = savedEmail;
+    }
+  });
+
+
+
+
+
+
   setTimeout(() => {
     document.getElementById('ratingModal').classList.add('open');
     document.body.classList.add('modal-open');
@@ -98,33 +191,6 @@ thumbs.forEach(thumb => {
     }
   });
 
-
-
-  const register = document.querySelector(".register"),
-      closeBtn = document.querySelector(".register-close"),
-      saveBtn = document.querySelector(".register-button"),
-      input = document.querySelector(".register-input"),
-      greeting = document.querySelector(".login-btn");
-
-document.body.classList.add("no-scroll"); 
-closeBtn.addEventListener("click", closeModal);
-saveBtn.addEventListener("click", saveName);
-
-function closeModal() {
-    register.classList.add("backdrop-hidden");
-    document.body.classList.remove("no-scroll");
-}
-
-function saveName() {
-    if (input.value.trim()) {
-        
-        greeting.textContent = `${input.value.trim()}`
-        closeModal();
-    } else {
-        input.placeholder = "Please enter your name";
-        input.classList.add("error");
-    }
-}
 
 
 
