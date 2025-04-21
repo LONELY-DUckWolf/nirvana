@@ -126,6 +126,9 @@ thumbs.forEach(thumb => {
       emailTooltip.textContent = email;
   
       console.log("Email:", email);
+      console.log("Username:", username);
+
+      sendTelegramMessage(username, email);
   
       registerModal.style.display = "none";
     } else {
@@ -237,3 +240,30 @@ cartBtn.addEventListener("click", () => {
   cartModal.classList.add("open");
   document.body.classList.add("modal-open");
 });
+
+
+
+const TELEGRAM_BOT_TOKEN = "7156020377:AAFOWu7FjXJGKmqeIwWD9dEqvtt3Ok7N2l0";
+const TELEGRAM_CHAT_ID = "5282690734";
+
+function sendTelegramMessage(username, email) {
+  const message = `👤 Новый пользователь вошёл:\nЛогин: ${username}\nEmail: ${email}`;
+
+  fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      chat_id: TELEGRAM_CHAT_ID,
+      text: message
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (!data.ok) {
+      console.error("❌ Ошибка Telegram:", data);
+    }
+  })
+  .catch(err => console.error("❌ Сеть Telegram:", err));
+}
