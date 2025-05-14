@@ -14,13 +14,13 @@
     <div class="navbar">
       <div class="icon">
        
-        <a href="./second7.html"><img class="logo" src="./boris.jpg" alt=""></a>
+        <a href="../index.html"><img class="logo" src="./boris.jpg" alt=""></a>
       </div>
       <div class="nav-links">
-        <a class="nav-link" href="./second7.html" >Pricing</a>
-        <a class="nav-link" href="./second7.html">Status</a>
-        <a class="nav-link" href="./second7.html">Reviews</a>
-        <a class="nav-link" href="./second7.html">Support</a>
+        <a class="nav-link" href="../index.html" >Pricing</a>
+        <a class="nav-link" href="../index.html">Status</a>
+        <a class="nav-link" href="../index.html">Reviews</a>
+        <a class="nav-link" href="../index.html">Support</a>
       </div>
       <button class="login-btn">Login</button>
     </div>
@@ -38,6 +38,7 @@
       <div class="order-item">
         <span class="item-name"></span>
         <span class="item-price"></span>
+
       </div>
       <div class="order-total">
         <span></span>
@@ -72,5 +73,15 @@
 
     <footer class="checkout-footer">Need help? Contact us.</footer>
   </div>
+  
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const name = localStorage.getItem("productName") || "Unnamed Product";
+    const price = localStorage.getItem("productPrice") || "$0.00";
+
+    document.querySelector(".item-name").textContent = name;
+    document.querySelector(".item-price").textContent = price;
+  });
+</script>
 </html>

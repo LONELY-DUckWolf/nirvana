@@ -65,7 +65,7 @@
           <p class="old-price">$45.00 <span class="new-price">$29.99</span></p>
           <p class="stock">Availability: <span class="in-stock">13 in stock</span></p>
       
-          <button id="purchaseBtn" class="purchase-btn">PURCHASE</button>
+          <button id="purchaseBtn" class="purchase-btn"><a href="buy.html" class="purchase-btn" onclick="saveProductInfo()">PURCHASE</a></button>
         </div>
       </section>
       
@@ -106,34 +106,13 @@
       <button id="scrollTopBtn" class="scroll-top">↑</button>
 
 
-      <div id="cartModal" class="cart-modal">
-        <div class="cart-modal-content">
-          <span class="close-btn" id="closeCartBtn">&times;</span>
-          <h2>View Your Cart</h2>
-          <div class="line"></div>
-          <p class="buy-item"></p>
-        </div>
-        <div class="cart-modal-footer">
-          <button class="checkout-btn"><a href="./buy.html" class="cart-buy">Checkout</a></button>    
-        </div>
-        <div class="discount-container">
-            <div class="discount-header" id="toggleDiscount">
-              <span>Got a discount code?</span>
-              <span class="arrow" id="arrow">&#9660;</span>
-            </div>
-          
-            <div class="discount-body" id="discountBody">
-              <input type="text" placeholder="Coupon Code" class="discount-input" />
-              <button class="apply-btn">Apply</button>
-            </div>
-          </div>
-          
-      </div>
 
-      <button id="cartBtn" class="cart-button" style="display: none;">
-        🛒
-      </button>
 <script type="module" src="./index.js"></script>
-  
+<script>
+  function saveProductInfo() {
+    localStorage.setItem("productName", "AI Aimbot");
+    localStorage.setItem("productPrice", "$29.99");
+  }
+</script>
 </body>
 </html>
